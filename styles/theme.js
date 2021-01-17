@@ -1,7 +1,25 @@
-import React from 'react';
+import React from 'react'
 import { extendTheme } from '@chakra-ui/react'
 
+const components = {
+  Button: {
+    variants: {
+      primary: {
+        backgroundColor: 'gray.900',
+        color: 'white',
+        fontWeight: 'medium',
+        _hover: { bg: 'gray.700' },
+        _active: { bg: 'gray.800' },
+      },
+    },
+  },
+}
+
 const theme = extendTheme({
+  components,
+  colors: {
+    brand: '#0AF5F4',
+  },
   fonts: {
     body:
       'Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
